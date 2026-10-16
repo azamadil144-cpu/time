@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .clock{
+          height: 140px;
+          width: 280px;
+          background:black;
+          color: white;
+          margin: 0 auto;
+          text-align: center;
+          align-content: center;
+          margin-top: 30vh;
+          font-size: 20px;
+          border: 8px dotted white;
+     }
+     .text{
+          border: 3px solid white;
+          border-radius: 50px;
+          padding: 10px;
+     }
+    </style>
+</head>
+<body>
+     <div class="clock">
+    <div class="text" id="days"></div>
+    <div class="text" id="text"></div>
+    </div>
+
+  
+    <script>
+
+        var text  = document.getElementById('text')
+        var days  = document.getElementById('days')
+
+
+            //  document.write(date.getDay())
+      
+             var dates = new Date()
+              
+
+             setInterval(function(){
+             var date = new Date()
+
+              text.innerHTML = `
+             ${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
+             },1000)
+             if (dates.getDay() == 1 ) {
+                  days.innerText = "Welcome to Monday"
+             }
+             if (dates.getDay() == 2 ) {
+                  days.innerText = "Welcome to Thuesday"
+             }
+             if (dates.getDay() == 3 ) {
+                  days.innerText = "Welcome to Wednesday"
+             }
+             if (dates.getDay() == 4 ) {
+                  days.innerText = "Welcome to Thursday"
+             }
+             if (dates.getDay() == 5 ) {
+                  days.innerText = "Welcome to Firday"
+             }
+             if (dates.getDay() == 6 ) {
+                  days.innerText = "Welcome to Saturday"
+             }
+                if (dates.getDay() == 7 ) {
+                  days.innerText = "Welcome to Sunday"
+             }
+    </script>
+</body>
+</html>
